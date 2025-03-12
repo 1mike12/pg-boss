@@ -346,7 +346,7 @@ declare class PgBoss extends EventEmitter {
   fail(name: string, ids: string[], options?: PgBoss.ConnectionOptions): Promise<void>;
 
   getJobById<T>(name: string, id: string, options?: PgBoss.ConnectionOptions & { includeArchive: boolean }): Promise<PgBoss.JobWithMetadata<T> | null>;
-
+  getWorkers(): PgBoss.Worker[];
   createQueue(name: string, options?: PgBoss.Queue): Promise<void>;
   updateQueue(name: string, options?: PgBoss.Queue): Promise<void>;
   deleteQueue(name: string): Promise<void>;
