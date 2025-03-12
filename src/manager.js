@@ -91,7 +91,8 @@ class Manager extends EventEmitter {
       this.getQueue,
       this.getQueues,
       this.clearStorage,
-      this.getJobById
+      this.getJobById,
+      this.getWorkers
     ]
   }
 
